@@ -1,0 +1,721 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Madium */
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rouls */
+/* Start Variables */
+:root {
+  --main-color: #333;
+  --secnd-color: #0C5460;
+  --text-color: #10cab7;
+  --white-color: white;
+  --transition-03s: 0.3s;
+}
+
+/* My Frem work */
+
+.h1-id-ul {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+
+.grid-300px {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* End Variables */
+/* Start Header */
+.header {
+  padding: 10px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .container .links {
+  position: relative;
+}
+
+.header .container .links:hover ul {
+  display: block;
+}
+
+.header .container .logo {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 10px 5px #ccc;
+  border-radius: 50%;
+}
+
+.header .container .links a img {
+  background-color: transparent;
+  height: 30px;
+  cursor: pointer;
+}
+
+.header .container .links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-color);
+  position: absolute;
+  right: 0;
+  width: 200px;
+  top: calc(100% + 5px);
+  text-align: center;
+  /* border-radius: 10px; */
+  display: none;
+}
+
+.header .container .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--main-color) transparent;
+  position: absolute;
+  border-radius: 20px;
+  top: -20px;
+  right: 5px;
+}
+
+.header .container .links ul li a {
+  display: block;
+  padding: 10px;
+  color: var(--secnd-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-03s);
+  /* border-radius: 10px; */
+}
+
+.header .container .links ul li a {
+  border: 0.1px solid var(--main-color);
+}
+
+.header .container .links ul li a:hover {
+  box-shadow: 0 0 8px 2px;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: #ddd;
+}
+
+/* End Header */
+/* Start Landing Section */
+.landing {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.338), rgba(0, 0, 0, 0.251)), url(../imges/landing.jpg);
+  background-size: cover;
+  /* background-position: center; */
+  background-attachment: fixed;
+  height: calc(100vh - 90px);
+  position: relative;
+  z-index: -1;
+}
+
+.landing .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.landing .intro-text p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 35px;
+  margin-top: 40px;
+}
+
+/* End Landing Section */
+/* Start register */
+
+.register h1 {
+  text-align: center;
+  color: var(--secnd-color);
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+.register .container {
+  gap: 15px;
+}
+
+.register .container .feat {
+  text-align: center;
+  background-color: var(--white-color);
+  /* border: solid 1px var(--main-color); */
+  transition: var(--transition-03s);
+  border-radius: 5px;
+}
+
+.register .container .feat:hover {
+  box-shadow: 0 0 4px 2px var(--main-color);
+}
+
+.register .container .feat h3 {
+  color: var(--main-color);
+  margin: 0;
+  padding: 18px;
+  background-color: var(--text-color);
+  border-radius: 5px;
+}
+
+.register .container i span {
+  font-size: 30px;
+  color: var(--secnd-color);
+  margin-bottom: 15px;
+}
+
+.register .container .feat ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.register .container .feat ul li:hover {
+  background-color: var(--secnd-color);
+  border-radius: 5px;
+}
+
+.register .container .feat ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 15px 40px;
+  display: block;
+  font-weight: bold;
+}
+
+/* End register */
+/* Strat director */
+
+
+.director h1 {
+  text-align: center;
+  color: var(--secnd-color);
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+.director .container .sistem {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 250px 250px 250px 250px 250px 250px;
+  gap: 10px;
+  grid-template-areas:
+    "bos bos bos bos bos bos"
+    "kil1 kil1 kil1 kil2 kil2 kil2"
+    "msh1 msh1 msh2 msh2 msh3 msh3"
+    "cho1 cho1 cho2 cho2 cho3 cho3"
+    "cho4 cho4 cho5 cho5 cho6 cho6"
+    "cho7 cho7 cho8 cho8 cho9 cho9";
+}
+
+@media (max-width:768px) {
+  .director .container .sistem {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.director .container .sistem .card:nth-child(1) {
+  grid-area: bos;
+}
+
+.director .container .sistem .card:nth-child(2) {
+  grid-area: kil1;
+}
+
+.director .container .sistem .card:nth-child(3) {
+  grid-area: kil2;
+}
+
+.director .container .sistem .card:nth-child(4) {
+  grid-area: msh1;
+}
+
+.director .container .sistem .card:nth-child(5) {
+  grid-area: msh2;
+}
+
+.director .container .sistem .card:nth-child(6) {
+  grid-area: msh3;
+}
+
+.director .container .sistem .card:nth-child(7) {
+  grid-area: cho1;
+}
+
+.director .container .sistem .card:nth-child(8) {
+  grid-area: cho2;
+}
+
+.director .container .sistem .card:nth-child(9) {
+  grid-area: cho3;
+}
+
+.director .container .sistem .card:nth-child(10) {
+  grid-area: cho4;
+}
+
+.director .container .sistem .card:nth-child(11) {
+  grid-area: cho5;
+}
+
+.director .container .sistem .card:nth-child(12) {
+  grid-area: cho6;
+}
+
+.director .container .sistem .card:nth-child(13) {
+  grid-area: cho7;
+}
+
+.director .container .sistem .card:nth-child(14) {
+  grid-area: cho8;
+}
+
+.director .container .sistem .card:nth-child(15) {
+  grid-area: cho9;
+}
+
+.director .container .sistem .card {
+  background-color: var(--white-color);
+  text-align: center;
+  border-radius: 5px;
+  color: var(--main-color);
+}
+
+.director .container .sistem .card:hover {
+  box-shadow: 0 0 4px 2px var(--main-color);
+}
+
+.director .container .sistem .card h3 {
+  color: var(--main-color);
+  margin: 0;
+  padding: 18px;
+  background-color: var(--text-color);
+  border-radius: 5px;
+}
+
+.director .container .sistem .card p {
+  font-weight: bold;
+  color: var(--secnd-color);
+}
+
+.director .container .sistem .card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* background-color: var(--secnd-color); */
+}
+
+@media (max-width:768px) {
+  .director .container .sistem .card ul {
+    margin-bottom: 30px;
+  }
+}
+
+.director .container .sistem .card ul li {
+  color: var(--text-color);
+  padding: 7px 40px;
+}
+
+/* End director */
+/* Start Teachers */
+.teachers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ddd;
+}
+
+.teachers h1 {
+  text-align: center;
+  color: var(--secnd-color);
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+.teachers .container .box {
+  gap: 40px;
+}
+
+.teachers .container .box a {
+  text-decoration: none;
+
+}
+
+.teachers .container .box a .temp {
+  background-color: var(--white-color);
+  direction: rtl;
+  border-radius: 5px;
+  transition: var(--transition-03s);
+}
+
+.teachers .container .box a .temp h2::before {
+  content: "";
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: 0.2s;
+}
+
+.teachers .container .box a .temp:hover h2::before {
+  top: 100%;
+
+}
+
+.teachers .container .box a .temp:hover {
+  box-shadow: 0 0 4px 2px var(--main-color);
+  transform: scale(1.1);
+}
+
+.teachers .container .box a .temp h2 {
+  position: relative;
+  color: var(--main-color);
+  padding: 20px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.teachers .container .box a .temp p {
+  color: var(--secnd-color);
+  background-color: var(--text-color);
+  padding: 20px;
+  font-weight: bold;
+  line-height: 40px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+/* End Teachers */
+/* Start Students */
+.students {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #eee;
+}
+
+.students h1 {
+  text-align: center;
+  color: var(--secnd-color);
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+.students .container .sections {
+  gap: 35px;
+}
+
+.students .container .sections .division {
+  text-align: center;
+  background-color: #10cab7;
+}
+
+.students .container .sections .division h3 {
+  font-weight: bold;
+  background-color: #ccc;
+  padding: 18px;
+  margin: 0;
+}
+
+.students .container .sections .division ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.students .container .sections .division ul li {
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.students .container .sections .division a {
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  transition: var(--transition-03s);
+  font-weight: bold;
+}
+
+.students .container .sections .division a:hover {
+  text-shadow: 0px 0px 15px var(--white-color);
+  /* transform: scale(1.1); */
+}
+
+.students .container .sections .division:nth-child(1) h3,
+.students .container .sections .division:nth-child(1) {
+  border-top-left-radius: 30px;
+}
+
+.students .container .sections .division:nth-child(3) h3,
+.students .container .sections .division:nth-child(3) {
+  border-top-right-radius: 30px;
+}
+
+.students .container .sections .division:nth-child(7) {
+  border-bottom-left-radius: 30px;
+}
+
+.students .container .sections .division:nth-child(9) {
+  border-bottom-right-radius: 30px;
+}
+
+@media (max-width:1200px) {
+  .students .container .sections .division:nth-child(1) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(2) h3,
+  .students .container .sections .division:nth-child(2) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(2) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(3) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(3) h3,
+  .students .container .sections .division:nth-child(3) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(3) h3,
+  .students .container .sections .division:nth-child(3) {
+    border-top-right-radius: 0px;
+  }
+
+  .students .container .sections .division:nth-child(4) h3,
+  .students .container .sections .division:nth-child(4) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(4) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(5) h3,
+  .students .container .sections .division:nth-child(5) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(5) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(6) h3,
+  .students .container .sections .division:nth-child(6) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(6) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(7) h3,
+  .students .container .sections .division:nth-child(7) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(7) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(7) {
+    border-bottom-left-radius: 0px;
+  }
+
+  .students .container .sections .division:nth-child(8) h3,
+  .students .container .sections .division:nth-child(8) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(8) {
+    border-bottom-right-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(9) h3,
+  .students .container .sections .division:nth-child(9) {
+    border-top-left-radius: 30px;
+  }
+
+  .students .container .sections .division:nth-child(9) {
+    border-bottom-right-radius: 30px;
+  }
+}
+
+/* End Students */
+/* Start About */
+.aAbout {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #fff;
+}
+
+.aAbout h1 {
+  text-align: center;
+  color: var(--secnd-color);
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+.aAbout .container .about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  direction: rtl;
+}
+
+.aAbout .container .about .out {
+  background-color: var(--text-color);
+  position: relative;
+  transition: var(--transition-03s);
+  border-bottom-left-radius: 20px;
+}
+
+.aAbout .container .about .out:hover {
+  background-image: linear-gradient(225deg, #27d86c 0%, #86caf8 50%, #c685d0 100%);
+}
+
+/* .aAbout .container .about .out:hover::before {
+  background-image: linear-gradient(225deg, #27d86c 0%, #86caf8 50%, #c685d0 100%);
+} */
+
+.aAbout .container .about .out::before {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+}
+
+.aAbout .container .about .out h3 {
+  margin: 0;
+  padding: 20px;
+  font-weight: 900;
+}
+
+.aAbout .container .about .out p {
+  margin: 0;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* End About */
+/* Start contact */
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ddd;
+}
+
+.contact h1 {
+  text-align: center;
+  color: var(--secnd-color);
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+.contact .container {
+  direction: rtl;
+}
+
+.contact .container span,
+.contact .container span a,
+.contact .container a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.contact .container span:hover,
+.contact .container span a:hover,
+.contact .container a:hover {
+  text-decoration: underline;
+}
+
+/* End contact */
+/* Start Footer */
+
+.footer {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer span {
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+/* End Footer */
